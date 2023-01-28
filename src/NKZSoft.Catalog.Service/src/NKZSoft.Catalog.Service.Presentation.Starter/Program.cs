@@ -1,6 +1,7 @@
 using EFCoreSecondLevelCacheInterceptor;
 using NKZSoft.Catalog.Service.EFCore.Caching.Redis;
 using NKZSoft.Catalog.Service.EFCore.Caching.Redis.Extensions;
+using NKZSoft.Catalog.Service.Presentation.Rest.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

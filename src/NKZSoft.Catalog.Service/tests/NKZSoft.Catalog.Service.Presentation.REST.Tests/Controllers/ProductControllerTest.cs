@@ -2,9 +2,10 @@
 [assembly: TestCaseOrderer("Xunit.Extensions.Ordering.TestCaseOrderer", "Xunit.Extensions.Ordering")]
 [assembly: TestCollectionOrderer("Xunit.Extensions.Ordering.CollectionOrderer", "Xunit.Extensions.Ordering")]
 
-namespace NKZSoft.Catalog.Service.Presentation.REST.Tests.Controllers;
+namespace NKZSoft.Catalog.Service.Presentation.Rest.Tests.Controllers;
 
 using Common;
+using NKZSoft.Catalog.Service.Presentation.Rest.Models.Result;
 
 [Collection(nameof(RestCollectionDefinition))]
 [Trait("TestType", "Integration")]

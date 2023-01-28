@@ -1,4 +1,4 @@
-﻿namespace NKZSoft.Catalog.Service.Presentation.REST.Tests.Common;
+﻿namespace NKZSoft.Catalog.Service.Presentation.Rest.Tests.Common;
 
 using SeedData;
 

@@ -54,13 +54,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKZSoft.Catalog.Service.Mes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKZSoft.Catalog.Service.Persistence.PostgreSQL", "src\NKZSoft.Catalog.Service\src\NKZSoft.Catalog.Service.Persistence.PostgreSQL\NKZSoft.Catalog.Service.Persistence.PostgreSQL.csproj", "{2220F238-43CF-498F-9DD6-C163FCBC271B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKZSoft.Catalog.Service.Presentation.REST", "src\NKZSoft.Catalog.Service\src\NKZSoft.Catalog.Service.Presentation.REST\NKZSoft.Catalog.Service.Presentation.REST.csproj", "{78338E0F-F191-4C63-96E5-B4870FB65F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKZSoft.Catalog.Service.Presentation.Rest", "src\NKZSoft.Catalog.Service\src\NKZSoft.Catalog.Service.Presentation.Rest\NKZSoft.Catalog.Service.Presentation.Rest.csproj", "{78338E0F-F191-4C63-96E5-B4870FB65F51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKZSoft.Catalog.Service.Application.Tests", "src\NKZSoft.Catalog.Service\tests\NKZSoft.Catalog.Service.Application.Tests\NKZSoft.Catalog.Service.Application.Tests.csproj", "{E37D9354-DC35-4B5A-85CC-235A3D14E7CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKZSoft.Catalog.Service.Common.Tests", "src\NKZSoft.Catalog.Service\tests\NKZSoft.Catalog.Service.Common.Tests\NKZSoft.Catalog.Service.Common.Tests.csproj", "{8451D513-881C-46C0-9D94-9A5601A16F21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKZSoft.Catalog.Service.Presentation.REST.Tests", "src\NKZSoft.Catalog.Service\tests\NKZSoft.Catalog.Service.Presentation.REST.Tests\NKZSoft.Catalog.Service.Presentation.REST.Tests.csproj", "{CF0CB70A-5EE9-4B98-86CD-9656406DEC2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKZSoft.Catalog.Service.Presentation.Rest.Tests", "src\NKZSoft.Catalog.Service\tests\NKZSoft.Catalog.Service.Presentation.Rest.Tests\NKZSoft.Catalog.Service.Presentation.Rest.Tests.csproj", "{CF0CB70A-5EE9-4B98-86CD-9656406DEC2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{52D4F9B6-9AD4-4B1D-AEF9-53B90E92FEEC}"
 EndProject

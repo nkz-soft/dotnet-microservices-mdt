@@ -14,7 +14,6 @@ global using NKZSoft.Catalog.Service.Application.Product.Commands.Create;
 global using NKZSoft.Catalog.Service.Application.Product.Models;
 global using NKZSoft.Catalog.Service.Domain.AggregatesModel.ProductAggregates.Entities;
 global using NKZSoft.Catalog.Service.Persistence.PostgreSQL.Extensions;
-global using NKZSoft.Catalog.Service.Presentation.REST.Models.Result;
 global using RestSharp;
 
 

@@ -1,4 +1,4 @@
-﻿namespace NKZSoft.Catalog.Service.Presentation.REST.Tests.SeedData;
+﻿namespace NKZSoft.Catalog.Service.Presentation.Rest.Tests.SeedData;
 
 internal sealed partial class SeedDataContext : IDbInitializer
 {

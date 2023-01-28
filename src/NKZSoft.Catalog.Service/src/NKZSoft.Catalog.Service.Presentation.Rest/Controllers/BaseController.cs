@@ -1,4 +1,4 @@
-namespace NKZSoft.Catalog.Service.Presentation.REST.Controllers;
+namespace NKZSoft.Catalog.Service.Presentation.Rest.Controllers;
 
 [ApiController]
 [Produces("application/json")]

@@ -1,12 +1,12 @@
-namespace NKZSoft.Catalog.Service.Presentation.REST.Controllers.Version10;
+namespace NKZSoft.Catalog.Service.Presentation.Rest.Controllers.Version10;
 
-using Application.Models;
-using Application.Product.Commands.Create;
-using Application.Product.Models;
-using Application.Product.Queries.Get;
-using Application.Product.Queries.GetPage;
-using Domain.AggregatesModel.ProductAggregates.Entities;
 using Models.Result;
+using NKZSoft.Catalog.Service.Application.Models;
+using NKZSoft.Catalog.Service.Application.Product.Commands.Create;
+using NKZSoft.Catalog.Service.Application.Product.Models;
+using NKZSoft.Catalog.Service.Application.Product.Queries.Get;
+using NKZSoft.Catalog.Service.Application.Product.Queries.GetPage;
+using NKZSoft.Catalog.Service.Domain.AggregatesModel.ProductAggregates.Entities;
 
 [ApiVersion(VersionController.Version10)]
 [Route("api/v{version:apiVersion}/products")]

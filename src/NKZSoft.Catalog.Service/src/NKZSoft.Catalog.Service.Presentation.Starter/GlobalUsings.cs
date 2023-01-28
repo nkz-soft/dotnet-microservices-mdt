@@ -11,4 +11,3 @@ global using NKZSoft.Catalog.Service.Application.Common.Interfaces;
 global using NKZSoft.Catalog.Service.Infrastructure.Core;
 global using NKZSoft.Catalog.Service.MessageBrokers.RabbitMq.Extensions;
 global using NKZSoft.Catalog.Service.Persistence.PostgreSQL.Extensions;
-global using NKZSoft.Catalog.Service.Presentation.REST.Extensions;

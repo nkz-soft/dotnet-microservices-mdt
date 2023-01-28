@@ -1,4 +1,4 @@
-namespace NKZSoft.Catalog.Service.Presentation.REST.Extensions;
+namespace NKZSoft.Catalog.Service.Presentation.Rest.Extensions;
 
 using Filters;
 

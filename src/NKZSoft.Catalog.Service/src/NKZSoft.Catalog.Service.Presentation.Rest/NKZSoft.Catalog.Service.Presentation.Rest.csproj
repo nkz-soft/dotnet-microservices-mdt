@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <Version>1.1.5</Version>
+    <AssemblyName>NKZSoft.Catalog.Service.Presentation.Rest</AssemblyName>
+    <RootNamespace>NKZSoft.Catalog.Service.Presentation.Rest</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

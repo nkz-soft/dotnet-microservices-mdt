@@ -1,4 +1,4 @@
-﻿namespace NKZSoft.Catalog.Service.Presentation.REST.Models.Result;
+﻿namespace NKZSoft.Catalog.Service.Presentation.Rest.Models.Result;
 
 internal static class ResultDtoHelpers
 {
