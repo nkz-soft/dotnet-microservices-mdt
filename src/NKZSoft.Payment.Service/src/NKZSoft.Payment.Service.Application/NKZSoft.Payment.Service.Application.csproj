@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" />
+        <PackageReference Include="FluentResults" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+        <PackageReference Include="Mapster" />
+        <PackageReference Include="Mapster.Async" />
+        <PackageReference Include="Mapster.DependencyInjection" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" />
+        <PackageReference Update="Microsoft.SourceLink.GitHub" />
+    </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\NKZSoft.Payment.Service.Common\NKZSoft.Payment.Service.Common.csproj" />
+    <ProjectReference Include="..\NKZSoft.Payment.Service.Domain\NKZSoft.Payment.Service.Domain.csproj" />
+    <ProjectReference Include="..\NKZSoft.Payment.Service.MessageBrokers.RabbitMq\NKZSoft.Payment.Service.MessageBrokers.RabbitMq.csproj" />
+  </ItemGroup>
+
+    <ItemGroup>
+        <Generated Include="**\*.g.cs" />
+        <Generated Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="obj\**" />
+    </ItemGroup>
+    <Target Name="CleanGenerated">
+        <Delete Files="@(Generated)" />
+    </Target>
+
+</Project>

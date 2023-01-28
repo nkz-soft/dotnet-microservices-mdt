@@ -1,0 +1,14 @@
+﻿namespace NKZSoft.Payment.Service.Persistence.PostgreSQL.Repositories;
+
+using Application.Common.Repositories;
+
+public class ToDoItemRepository : RepositoryBase<ToDoItem>, IToDoItemRepository
+{
+    public ToDoItemRepository(IApplicationDbContext dbContext) : base(dbContext.AppDbContext)
+    {
+    }
+
+    public ToDoItemRepository(IApplicationDbContext dbContext, ISpecificationEvaluator specificationEvaluator) : base(dbContext.AppDbContext, specificationEvaluator)
+    {
+    }
+}

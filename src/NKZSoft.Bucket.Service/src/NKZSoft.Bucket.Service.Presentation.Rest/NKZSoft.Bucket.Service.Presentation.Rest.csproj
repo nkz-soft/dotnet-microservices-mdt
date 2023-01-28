@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>1.1.5</Version>
+    <AssemblyName>NKZSoft.Bucket.Service.Presentation.Rest</AssemblyName>
+    <RootNamespace>NKZSoft.Bucket.Service.Presentation.Rest</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="NKZSoft.Service.Configuration.Logger" />
+    <PackageReference Include="NKZSoft.Service.Configuration.Swagger" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NKZSoft.Bucket.Service.Application\NKZSoft.Bucket.Service.Application.csproj" />
+    <ProjectReference Include="..\NKZSoft.Bucket.Service.Common\NKZSoft.Bucket.Service.Common.csproj" />
+    <ProjectReference Include="..\NKZSoft.Bucket.Service.Infrastructure.Core\NKZSoft.Bucket.Service.Infrastructure.Core.csproj" />
+    <ProjectReference Include="..\NKZSoft.Bucket.Service.Persistence.PostgreSQL\NKZSoft.Bucket.Service.Persistence.PostgreSQL.csproj" />
+  </ItemGroup>
+
+
+</Project>

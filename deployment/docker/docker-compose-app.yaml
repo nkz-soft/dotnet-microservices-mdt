@@ -1,15 +1,72 @@
 ﻿version: '3.9'
 
 services:
+
+  gateway:
+    build:
+      context: ./../../src/NKZSoft.Gateway.Service
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+    ports:
+      - "0.0.0.0:8080:80"
+      - "0.0.0.0:8081:81"
+    networks:
+      - mdt-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
   catalog:
     build:
       context: ./../../src/NKZSoft.Catalog.Service
       dockerfile: Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Docker
-    ports:
-      - "0.0.0.0:8080:5055"
-      - "0.0.0.0:8081:5056"
+    networks:
+      - mdt-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  bucket:
+    build:
+      context: ./../../src/NKZSoft.Bucket.Service
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+    networks:
+      - mdt-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  order:
+    build:
+      context: ./../../src/NKZSoft.Order.Service
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+    networks:
+      - mdt-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  payment:
+    build:
+      context: ./../../src/NKZSoft.Payment.Service
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
     networks:
       - mdt-network
     depends_on:

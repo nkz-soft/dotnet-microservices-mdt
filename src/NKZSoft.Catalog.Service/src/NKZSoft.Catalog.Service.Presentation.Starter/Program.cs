@@ -52,9 +52,11 @@ app.UseAuthorization();
 
 app.MapRestEndpoints();
 
-app.MapHealthChecks("/healthz");
+app.MapHealthChecks("/health/startup");
+app.MapHealthChecks("/healthz", new HealthCheckOptions { Predicate = _ => false });
+app.MapHealthChecks("/ready", new HealthCheckOptions { Predicate = _ => false });
 
-app.MapHealthChecks("/healthz-ex", new HealthCheckOptions
+app.MapHealthChecks("/health/info", new HealthCheckOptions
 {
     Predicate = _ => true,
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse

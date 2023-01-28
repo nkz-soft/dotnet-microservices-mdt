@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+      <PackageReference Include="AspNetCore.HealthChecks.Rabbitmq" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+      <PackageReference Include="MassTransit.AspNetCore" />
+      <PackageReference Include="MassTransit.Extensions.DependencyInjection" />
+      <PackageReference Include="NKZSoft.Service.Configuration.MassTransit.RabbitMq" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NKZSoft.Payment.Service.Events\NKZSoft.Payment.Service.Events.csproj" />
+    </ItemGroup>
+
+</Project>
