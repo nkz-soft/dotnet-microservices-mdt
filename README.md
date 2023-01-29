@@ -12,7 +12,7 @@ The purpose of this repository is to provide best practices to implement an exam
   - [x] Payment service
   - [x] Gateway service
 - [x] Docker compose
-- [ ] Github actions 
+- [x] Basic Github actions 
 - [ ] Development of business logic for services
   - [ ] Catalog service
   - [ ] Order service
