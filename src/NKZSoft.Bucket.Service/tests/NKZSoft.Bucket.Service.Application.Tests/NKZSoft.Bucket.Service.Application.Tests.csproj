@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+        <PackageReference Include="xunit" />
+        <PackageReference Include="Xunit.Extensions.Ordering" />
+        <PackageReference Include="Xunit.DependencyInjection" />
+        <PackageReference Include="xunit.runner.visualstudio">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="coverlet.collector">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="FluentAssertions" />
+        <PackageReference Include="Moq" />
+        <PackageReference Include="Respawn" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+        <PackageReference Update="Microsoft.SourceLink.GitHub" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\NKZSoft.Bucket.Service.Application\NKZSoft.Bucket.Service.Application.csproj" />
+        <ProjectReference Include="..\..\src\NKZSoft.Bucket.Service.Infrastructure.Core\NKZSoft.Bucket.Service.Infrastructure.Core.csproj" />
+        <ProjectReference Include="..\..\src\NKZSoft.Bucket.Service.Persistence.PostgreSQL\NKZSoft.Bucket.Service.Persistence.PostgreSQL.csproj" />
+        <ProjectReference Include="..\NKZSoft.Bucket.Service.Common.Tests\NKZSoft.Bucket.Service.Common.Tests.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>1.1.5</Version>
+    <AssemblyName>NKZSoft.Payment.Service.Presentation.Rest</AssemblyName>
+    <RootNamespace>NKZSoft.Payment.Service.Presentation.Rest</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="NKZSoft.Service.Configuration.Logger" />
+    <PackageReference Include="NKZSoft.Service.Configuration.Swagger" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NKZSoft.Payment.Service.Application\NKZSoft.Payment.Service.Application.csproj" />
+    <ProjectReference Include="..\NKZSoft.Payment.Service.Common\NKZSoft.Payment.Service.Common.csproj" />
+    <ProjectReference Include="..\NKZSoft.Payment.Service.Infrastructure.Core\NKZSoft.Payment.Service.Infrastructure.Core.csproj" />
+    <ProjectReference Include="..\NKZSoft.Payment.Service.Persistence.PostgreSQL\NKZSoft.Payment.Service.Persistence.PostgreSQL.csproj" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <AnalysisLevel>latest</AnalysisLevel>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\NKZSoft.Payment.Service.Application\NKZSoft.Payment.Service.Application.csproj" />
+      <ProjectReference Include="..\..\src\NKZSoft.Payment.Service.Infrastructure.Core\NKZSoft.Payment.Service.Infrastructure.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Moq" />
+      <PackageReference Include="Serilog.Extensions.Hosting" />
+      <PackageReference Include="Serilog.Sinks.Console" />
+      <PackageReference Include="Testcontainers" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" />
+      <PackageReference Include="xunit.extensibility.core" />
+      <PackageReference Update="Microsoft.SourceLink.GitHub" />
+    </ItemGroup>
+
+</Project>

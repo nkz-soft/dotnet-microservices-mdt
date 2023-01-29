@@ -1,0 +1,56 @@
+version: '3.9'
+
+volumes:
+  postgres:
+  rabbitmq:
+
+services:
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "0.0.0.0:5432:5432"
+    networks:
+      - mdt-network
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "PGPASSWORD=postgres pg_isready -U postgres -h postgres"]
+      interval: 10s
+      timeout: 30s
+      retries: 15
+
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    environment:
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: rabbitmq
+    ports:
+      - "0.0.0.0:5672:5672"
+      - "0.0.0.0:15672:15672"
+    networks:
+      - mdt-network
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 30s
+      retries: 15
+
+  redis:
+    image: redis:7.0
+    ports:
+      - "0.0.0.0:6379:6379"
+    networks:
+      - mdt-network
+    healthcheck:
+      test: redis-cli ping
+      interval: 10s
+      timeout: 30s
+      retries: 15
+
+networks:
+  mdt-network:

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>1.1.5</Version>
+    <AssemblyName>NKZSoft.Catalog.Service.Presentation.Rest</AssemblyName>
+    <RootNamespace>NKZSoft.Catalog.Service.Presentation.Rest</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="NKZSoft.Service.Configuration.Logger" />
+    <PackageReference Include="NKZSoft.Service.Configuration.Swagger" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NKZSoft.Catalog.Service.Application\NKZSoft.Catalog.Service.Application.csproj" />
+    <ProjectReference Include="..\NKZSoft.Catalog.Service.Common\NKZSoft.Catalog.Service.Common.csproj" />
+    <ProjectReference Include="..\NKZSoft.Catalog.Service.Infrastructure.Core\NKZSoft.Catalog.Service.Infrastructure.Core.csproj" />
+    <ProjectReference Include="..\NKZSoft.Catalog.Service.Persistence.PostgreSQL\NKZSoft.Catalog.Service.Persistence.PostgreSQL.csproj" />
+  </ItemGroup>
+
+
+</Project>
