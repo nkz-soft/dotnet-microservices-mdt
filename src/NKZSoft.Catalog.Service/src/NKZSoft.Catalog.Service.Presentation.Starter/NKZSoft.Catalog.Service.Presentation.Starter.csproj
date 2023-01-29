@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NKZSoft.Catalog.Service.Presentation.REST\NKZSoft.Catalog.Service.Presentation.REST.csproj" />
+      <ProjectReference Include="..\NKZSoft.Catalog.Service.Presentation.Rest\NKZSoft.Catalog.Service.Presentation.Rest.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <InternalsVisibleTo Include="NKZSoft.Catalog.Service.Presentation.REST.Tests" />
+      <InternalsVisibleTo Include="NKZSoft.Catalog.Service.Presentation.Rest.Tests" />
     </ItemGroup>
 
     <Target Name="Clean" AfterTargets="Clean"> <!-- common vars https://msdn.microsoft.com/en-us/library/c02as0cs.aspx?f=255&MSPPError=-2147217396 -->
