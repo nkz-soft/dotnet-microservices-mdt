@@ -1,12 +1,18 @@
-name: build
+name: build-by-branch
 
 on:
   push:
     branches:
-    - main
-    - f/*
-    - fix/*
-
+      - main
+      - f/*
+      - fix/*
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,17 +29,18 @@ jobs:
         with:
           path: ~/.nuget/packages
           # Look to see if there is a cache hit for the corresponding requirements file
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/Directory.Packages.props') }}
           restore-keys: |
             ${{ runner.os }}-nuget
       - name: Restore Dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build -c Release --no-restore
-      - name: Catalog Application Test
-        run:  dotnet test ./src/NKZSoft.Catalog.Service/tests/NKZSoft.Catalog.Service.Application.Tests  --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage
-      - name: REST Test
-        run:  dotnet test ./src/NKZSoft.Catalog.Service/tests/NKZSoft.Catalog.Service.Presentation.REST.Tests --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage
+      - name: Application Tests
+        run: |
+            for dir in `find ./ -type d -name "*Application.Tests*"`; do
+              dotnet test $dir --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage
+            done
       - name: Merge test results
         run: |
             dotnet tool install -g dotnet-reportgenerator-globaltool
@@ -50,3 +57,20 @@ jobs:
           indicators: true
           output: both
           thresholds: '30 40'
+#      - name: Add Coverage PR Comment
+#        uses: marocchino/sticky-pull-request-comment@v2
+#        if: github.event_name == 'pull_request'
+#        with:
+#          recreate: true
+#          path: code-coverage-results.md
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Create badge
+#        uses: schneegans/dynamic-badges-action@v1.6.0
+#        with:
+#          auth: ${{ secrets.GIST_SECRET }}
+#          gistID: 7fa58d77450b2a406ba5cf1b3fd258a8
+#          filename: microservice-template.json
+#          label: coverage
+#          message: 50
+
